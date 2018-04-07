@@ -1,4 +1,4 @@
 # Machine Learning Foundations - Udacity
 
-    Projects from Machine Learning Fudations Nanodegree
+    Projects from Machine Learning Foundations Nanodegree
 
