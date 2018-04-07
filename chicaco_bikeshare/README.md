@@ -1,5 +1,3 @@
-# Machine Learning Foundations - Udacity
-
 # Explore Chicago Bikeshare Data
 
 ## Bike Share Data
