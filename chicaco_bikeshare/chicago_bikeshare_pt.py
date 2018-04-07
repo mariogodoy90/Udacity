@@ -115,8 +115,11 @@ def count_gender(data_list):
     male = 0
     female = 0
     gender = column_to_list(data_list, -2)
-    male = gender.count('Male')
-    female = gender.count('Female')
+    for i in gender:
+        if i == 'Male':
+            male += 1
+        elif i == 'Female':
+            female += 1
     return [male, female]
 
 
@@ -226,22 +229,30 @@ max_trip = 0.
 mean_trip = 0.
 median_trip = 0.
 
+# Converte os valores para inteiro
 trip_duration_list = list(map(int, trip_duration_list))
 
+# Atribui o primeiro valor da lista para o valor minimo
+# Compara os valores da lista para achar o menor
 min_trip = trip_duration_list[0]
 for i in range(len(trip_duration_list)):
     if trip_duration_list[i] < min_trip:
         min_trip = trip_duration_list[i]
 
+# Atribui o primeiro valor da lista para o valor maximo
+# Compara os valores da lista para achar o menor
 max_trip = trip_duration_list[0]
 for i in range(len(trip_duration_list)):
     if trip_duration_list[i] > max_trip:
         max_trip = trip_duration_list[i]
 
+# Realiza a contagem da quantidade de dados na lista
+# para a retirada da média (quantidade / tamanho )
 for i in trip_duration_list:
     mean_trip += i
 mean_trip /= len(trip_duration_list)
 
+# Organiza a lista por ordem crescente para retirar sua mediana
 trip_sorted = sorted(trip_duration_list)
 median_trip = trip_sorted[len(trip_duration_list)//2]
 
