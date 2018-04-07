@@ -233,14 +233,14 @@ median_trip = 0.
 trip_duration_list = list(map(int, trip_duration_list))
 
 # Atribui o primeiro valor da lista para o valor minimo
-# Compara os valores da lista para achar o menor
+# Compara os valores da lista para achar o menor valor
 min_trip = trip_duration_list[0]
 for i in range(len(trip_duration_list)):
     if trip_duration_list[i] < min_trip:
         min_trip = trip_duration_list[i]
 
 # Atribui o primeiro valor da lista para o valor maximo
-# Compara os valores da lista para achar o menor
+# Compara os valores da lista para achar o maior valor
 max_trip = trip_duration_list[0]
 for i in range(len(trip_duration_list)):
     if trip_duration_list[i] > max_trip:
